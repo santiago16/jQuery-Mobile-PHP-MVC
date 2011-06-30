@@ -167,7 +167,7 @@ class UserModel {
 	}
 
 	function is_logged(){
-		if($this->check($_SESSION['auth_email'], $_SESSION['auth_secret'])) return true;
+		if((isset($_SESSION['auth_email'])&&isset($_SESSION['auth_secret'])) && $this->check($_SESSION['auth_email'], $_SESSION['auth_secret'])) return true;
 		else return false;
 	}
 
