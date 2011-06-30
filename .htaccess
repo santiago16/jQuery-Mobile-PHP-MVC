@@ -1,3 +1,5 @@
 RewriteEngine on
+# Change RewriteBase if you have your site in a folder www.site.com/xyz/  then should be RewriteBase /xyz/
+RewriteBase /  
 RewriteCond $1 !^(index\.php|install\.php|lib|static|robots\.txt)
 RewriteRule ^(.*)$ index.php/$1 [L]
